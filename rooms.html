@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rooms &amp; Rates | Vicentenium Hotel</title>
+    <link rel="stylesheet" href="vendor/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="vendor/bootstrap-icons/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- navigation bar -->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top hotel-navbar">
+            <div class="container">
+                <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+                    <span class="logo-circle">V</span>
+                    <span class="brand-title fw-bold">Vicentenium <small class="gold-text fs-6 fw-normal">Hotel</small></span>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainMenu" aria-label="Toggle menu">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="mainMenu">
+                    <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-1">
+                        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                        <li class="nav-item"><a class="nav-link" href="rooms.html">Rooms &amp; Rates</a></li>
+                        <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+                        <li class="nav-item"><a class="nav-link" href="reviews.html">Reviews</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                        <li class="nav-item ms-lg-2">
+                            <a class="btn btn-gold btn-sm px-3" href="booking.html">
+                                <i class="bi bi-calendar-check me-1"></i>Book Now
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- page header -->
+        <section class="page-header" style="background-image: url('images/room-deluxe.jpg');">
+            <div class="container">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb justify-content-center small mb-2">
+                        <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                        <li class="breadcrumb-item active text-white-50">Rooms &amp; Rates</li>
+                    </ol>
+                </nav>
+                <h1 class="display-5 fw-bold">Rooms &amp; Rates</h1>
+                <p class="mb-0 text-white-50">Transparent per-night rates inclusive of 12% VAT.</p>
+            </div>
+        </section>
+
+        <!-- room filter and room cards -->
+        <section class="py-5">
+            <div class="container">
+                <div class="card info-card p-3 mb-4">
+                    <div class="row g-3 align-items-end">
+                        <div class="col-md-5">
+                            <label for="guestFilter" class="form-label small fw-semibold">Minimum Guests</label>
+                            <select id="guestFilter" class="form-select">
+                                <option value="0">Any capacity</option>
+                                <option value="2">2+ Guests</option>
+                                <option value="3">3+ Guests</option>
+                                <option value="4">4 Guests</option>
+                            </select>
+                        </div>
+                        <div class="col-md-7">
+                            <label for="maxPriceRange" class="form-label small fw-semibold d-flex justify-content-between">
+                                Max Price per Night
+                                <span id="maxPriceText" class="navy-text fw-bold">₱10,000</span>
+                            </label>
+                            <input type="range" id="maxPriceRange" class="form-range" min="3000" max="10000" step="200" value="10000">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- rooms are loaded here by script.js -->
+                <div class="row g-4" id="roomsContainer"></div>
+            </div>
+        </section>
+
+        <!-- services table and hotel policies -->
+        <section class="py-5 cream-bg">
+            <div class="container">
+                <div class="row g-4">
+                    <div class="col-lg-7">
+                        <h2 class="h3 mb-3">Services &amp; Add-on Rates</h2>
+                        <div class="table-responsive bg-white rounded-3 shadow-sm">
+                            <table class="table table-hover mb-0 align-middle">
+                                <thead class="table-dark">
+                                    <tr>
+                                        <th>Service</th>
+                                        <th>Details</th>
+                                        <th class="text-end">Rate</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Breakfast Buffet</td>
+                                        <td class="small text-muted">6:00–10:00 AM, Highland Café</td>
+                                        <td class="text-end fw-semibold">₱450 / guest</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Terminal Shuttle</td>
+                                        <td class="small text-muted">Round trip to Baguio bus terminals</td>
+                                        <td class="text-end fw-semibold">₱900 / booking</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Late Check-out</td>
+                                        <td class="small text-muted">Extended until 4:00 PM</td>
+                                        <td class="text-end fw-semibold">₱1,000 / room</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Half-Day City Tour</td>
+                                        <td class="small text-muted">Mines View, Wright Park, Botanical</td>
+                                        <td class="text-end fw-semibold">₱1,800 / guest</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Hilot Massage</td>
+                                        <td class="small text-muted">60-minute traditional Filipino spa</td>
+                                        <td class="text-end fw-semibold">₱1,200 / person</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Function Hall</td>
+                                        <td class="small text-muted">Up to 120 guests, 4 hours + audio</td>
+                                        <td class="text-end fw-semibold">from ₱35,000</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-5">
+                        <h2 class="h3 mb-3">Hotel Policies</h2>
+                        <ul class="list-group shadow-sm">
+                            <li class="list-group-item"><strong>Check-in / Check-out:</strong> 2:00 PM check-in · 12:00 NN check-out.</li>
+                            <li class="list-group-item"><strong>Weekend Rate:</strong> Friday &amp; Saturday nights carry a 15% surcharge.</li>
+                            <li class="list-group-item"><strong>Service Charge:</strong> 10% service charge applies to all bookings.</li>
+                            <li class="list-group-item"><strong>Cancellation:</strong> Free cancellation up to 72 hours before arrival.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- room details popup modal -->
+        <div class="modal fade" id="roomDetailsModal" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content overflow-hidden">
+                    <img id="modalRoomPhoto" src="" alt="Selected room photo" class="w-100" style="height: 220px; object-fit: cover;">
+                    <div class="modal-header">
+                        <h2 class="modal-title h5" id="modalRoomTitle">Room Details</h2>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body" id="modalRoomInfo"></div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-outline-navy btn-sm" data-bs-dismiss="modal">Close</button>
+                        <a id="modalBookLink" href="booking.html" class="btn btn-gold btn-sm">Book This Room</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- footer -->
+    <footer class="hotel-footer py-4">
+        <div class="container small">
+            <div class="d-flex flex-wrap justify-content-between align-items-center gap-2">
+                <span>© <span id="currentYear"></span> Vicentenium Hotel · 88 Leonard Wood Rd, Baguio City · (074) 442-8888</span>
+                <span>
+                    <a href="mailto:stay@vicentenium.ph">stay@vicentenium.ph</a> ·
+                    <a href="booking.html#staff-login">Staff Login</a>
+                </span>
+            </div>
+            <hr class="footer-divider my-3">
+            <div class="photo-sources">
+                <strong>Photo Sources (Wikimedia Commons):</strong><br>
+                    <a href="https://commons.wikimedia.org/wiki/File:Benguet_mountains_-_view_from_Mines_View_Park_(Baguio,_Benguet)(2018-02-25).jpg" target="_blank" rel="noopener">Cordillera Mountains (Mines View) (Patrick Roque, CC BY-SA 4.0)</a> ·
+                    <a href="https://commons.wikimedia.org/wiki/File:Camp_John_Hay_Garden_(12438180775).jpg" target="_blank" rel="noopener">Camp John Hay Garden (Andrew and Annemarie, CC BY-SA 2.0)</a> ·
+                    <a href="https://commons.wikimedia.org/wiki/File:Baguio_skyline_with_Burnham_Park_(close-up)_(Baguio,_Benguet)(2018-02-25).jpg" target="_blank" rel="noopener">Burnham Park Skyline (Patrick Roque, CC BY-SA 4.0)</a> ·
+                    <a href="https://commons.wikimedia.org/wiki/File:Baguio_City_overlooking_night_view_(Baguio_City;_02-24-2023).jpg" target="_blank" rel="noopener">Baguio City Night View (Patrickroque01, CC BY-SA 4.0)</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="vendor/bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

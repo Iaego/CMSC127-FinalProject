@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vicentenium Hotel | Baguio City</title>
+    <link rel="stylesheet" href="vendor/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="vendor/bootstrap-icons/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- navigation bar -->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top hotel-navbar">
+            <div class="container">
+                <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+                    <span class="logo-circle">V</span>
+                    <span class="brand-title fw-bold">Vicentenium <small class="gold-text fs-6 fw-normal">Hotel</small></span>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainMenu" aria-label="Toggle menu">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="mainMenu">
+                    <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-1">
+                        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                        <li class="nav-item"><a class="nav-link" href="rooms.html">Rooms &amp; Rates</a></li>
+                        <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+                        <li class="nav-item"><a class="nav-link" href="reviews.html">Reviews</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                        <li class="nav-item ms-lg-2">
+                            <a class="btn btn-gold btn-sm px-3" href="booking.html">
+                                <i class="bi bi-calendar-check me-1"></i>Book Now
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- hero banner -->
+        <section class="hero-section d-flex align-items-center">
+            <div class="container">
+                <div class="col-lg-7">
+                    <span class="gold-text text-uppercase small fw-semibold">Baguio City · Est. 1968</span>
+                    <h1 class="display-4 fw-bold my-3">Your warm highland home in the City of Pines.</h1>
+                    <p class="lead mb-4 text-white-50">
+                        Cool mountain air, cozy fireplace nights, and genuine Cordilleran hospitality just minutes from Session Road and Burnham Park.
+                    </p>
+                    <div class="d-flex flex-wrap gap-3">
+                        <a href="booking.html" class="btn btn-gold btn-lg">Book Your Stay</a>
+                        <a href="rooms.html" class="btn btn-outline-light btn-lg">Explore Rooms</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- quick availability search -->
+        <section class="container" style="margin-top: -44px; position: relative; z-index: 2;">
+            <form id="homeSearchForm" action="booking.html" method="get" class="card info-card p-4">
+                <div class="row g-3 align-items-end">
+                    <div class="col-md-3">
+                        <label for="homeCheckIn" class="form-label small fw-semibold">Check-in</label>
+                        <input type="date" id="homeCheckIn" name="checkin" class="form-control" required>
+                    </div>
+                    <div class="col-md-3">
+                        <label for="homeCheckOut" class="form-label small fw-semibold">Check-out</label>
+                        <input type="date" id="homeCheckOut" name="checkout" class="form-control" required>
+                    </div>
+                    <div class="col-md-3">
+                        <label for="homeGuests" class="form-label small fw-semibold">Guests</label>
+                        <select id="homeGuests" name="guests" class="form-select">
+                            <option value="1">1 Guest</option>
+                            <option value="2" selected>2 Guests</option>
+                            <option value="3">3 Guests</option>
+                            <option value="4">4 Guests</option>
+                            <option value="other">Other</option>
+                        </select>
+                        <input type="number" id="customGuestCount" class="form-control mt-2 d-none" min="1" max="50" placeholder="Enter number of pax">
+                    </div>
+                    <div class="col-md-3 d-grid">
+                        <button type="submit" class="btn btn-navy">
+                            <i class="bi bi-search me-1"></i>Check Availability
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </section>
+
+        <!-- welcome section -->
+        <section class="py-5 my-4">
+            <div class="container">
+                <div class="row align-items-center g-4">
+                    <div class="col-lg-6">
+                        <img src="images/lobby.jpg" alt="Heritage Baguio fireplace lounge with stone hearth" class="img-fluid rounded-3 shadow">
+                    </div>
+                    <div class="col-lg-6">
+                        <span class="gold-text text-uppercase small fw-semibold">Welcome to Vicentenium</span>
+                        <h2 class="my-2">Where the pines meet the heart of Baguio</h2>
+                        <p class="text-muted">
+                            Since 1968, the Barrozo family has welcomed guests with hot Benguet coffee, thick wool blankets, and stories by the stone hearth. Enjoy heritage charm paired with our easy online booking system.
+                        </p>
+                        <ul class="list-unstyled small mb-4">
+                            <li class="mb-2"><i class="bi bi-check-circle-fill gold-text me-2"></i>5-minute walk to Session Road &amp; Burnham Park</li>
+                            <li class="mb-2"><i class="bi bi-check-circle-fill gold-text me-2"></i>Hot showers, heaters, wool blankets &amp; free fiber Wi-Fi</li>
+                            <li><i class="bi bi-check-circle-fill gold-text me-2"></i>Free basement parking &amp; 24/7 front desk service</li>
+                        </ul>
+                        <a href="about.html" class="btn btn-outline-navy">Read Our Story</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- featured rooms -->
+        <section class="py-5 cream-bg">
+            <div class="container">
+                <div class="d-flex justify-content-between align-items-end mb-4 flex-wrap gap-2">
+                    <div>
+                        <span class="gold-text text-uppercase small fw-semibold">Stay With Us</span>
+                        <h2 class="mb-0">Featured Rooms</h2>
+                    </div>
+                    <a href="rooms.html" class="btn btn-outline-navy btn-sm">View All Rooms &amp; Rates</a>
+                </div>
+                <div class="row g-4">
+                    <div class="col-md-4">
+                        <article class="card info-card h-100">
+                            <div class="position-relative">
+                                <img src="images/room-standard.jpg" alt="Pine Classic Room view" class="room-photo">
+                                <span class="price-tag">₱3,200/night</span>
+                            </div>
+                            <div class="card-body">
+                                <h3 class="h5">Pine Classic Room</h3>
+                                <p class="small text-muted">Cozy queen room with garden pine views for couples and solo travellers.</p>
+                                <a href="booking.html?room=standard" class="btn btn-gold btn-sm">Book Now</a>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="col-md-4">
+                        <article class="card info-card h-100">
+                            <div class="position-relative">
+                                <img src="images/room-deluxe.jpg" alt="Deluxe Mountain View" class="room-photo">
+                                <span class="price-tag">₱4,800/night</span>
+                            </div>
+                            <div class="card-body">
+                                <h3 class="h5">Deluxe Mountain View</h3>
+                                <p class="small text-muted">King bed and private balcony facing the misty Cordillera mountains. Breakfast included.</p>
+                                <a href="booking.html?room=deluxe" class="btn btn-gold btn-sm">Book Now</a>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="col-md-4">
+                        <article class="card info-card h-100">
+                            <div class="position-relative">
+                                <img src="images/room-family.jpg" alt="Family Highland Room view" class="room-photo">
+                                <span class="price-tag">₱6,500/night</span>
+                            </div>
+                            <div class="card-body">
+                                <h3 class="h5">Family Highland Room</h3>
+                                <p class="small text-muted">Two double beds for families or barkadas overlooking Burnham Park and the skyline.</p>
+                                <a href="booking.html?room=family" class="btn btn-gold btn-sm">Book Now</a>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- amenities -->
+        <section class="py-5">
+            <div class="container text-center">
+                <span class="gold-text text-uppercase small fw-semibold">Amenities</span>
+                <h2 class="mb-4">Everything for a restful highland escape</h2>
+                <div class="row g-4">
+                    <div class="col-6 col-md-3">
+                        <div class="feature-icon mb-2"><i class="bi bi-cup-hot"></i></div>
+                        <h3 class="h6">Highland Café</h3>
+                        <p class="small text-muted">Benguet coffee &amp; strawberry taho</p>
+                    </div>
+                    <div class="col-6 col-md-3">
+                        <div class="feature-icon mb-2"><i class="bi bi-fire"></i></div>
+                        <h3 class="h6">Fireplace Lounge</h3>
+                        <p class="small text-muted">Warm stone hearth evenings</p>
+                    </div>
+                    <div class="col-6 col-md-3">
+                        <div class="feature-icon mb-2"><i class="bi bi-wifi"></i></div>
+                        <h3 class="h6">Fiber Wi-Fi</h3>
+                        <p class="small text-muted">Fast internet in every room</p>
+                    </div>
+                    <div class="col-6 col-md-3">
+                        <div class="feature-icon mb-2"><i class="bi bi-bus-front"></i></div>
+                        <h3 class="h6">City Shuttle</h3>
+                        <p class="small text-muted">Terminal &amp; Session Rd. drops</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- call to action -->
+        <section class="cta-section">
+            <div class="container">
+                <h2 class="mb-3">Plan your Baguio getaway today</h2>
+                <p class="mb-4 text-white-50">Transparent rates, instant online reservation, and free cancellation up to 72 hours before check-in.</p>
+                <a href="booking.html" class="btn btn-gold btn-lg">Reserve Your Room</a>
+            </div>
+        </section>
+    </main>
+
+    <!-- footer -->
+    <footer class="hotel-footer py-4">
+        <div class="container small">
+            <div class="d-flex flex-wrap justify-content-between align-items-center gap-2">
+                <span>© <span id="currentYear"></span> Vicentenium Hotel · 88 Leonard Wood Rd, Baguio City · (074) 442-8888</span>
+                <span>
+                    <a href="mailto:stay@vicentenium.ph">stay@vicentenium.ph</a> ·
+                    <a href="booking.html#staff-login">Staff Login</a>
+                </span>
+            </div>
+            <hr class="footer-divider my-3">
+            <div class="photo-sources">
+                <strong>Photo Sources (Wikimedia Commons):</strong><br>
+                    <a href="https://commons.wikimedia.org/wiki/File:Baguio_skyline_sunset_Kisad_(Baguio_City;_12-03-2022).jpg" target="_blank" rel="noopener">Baguio Sunset Skyline (Patrickroque01, CC BY-SA 4.0)</a> ·
+                    <a href="https://commons.wikimedia.org/wiki/File:Bell_House_Interior,_Camp_John_Hay,_Baguio,_Jul_2025.jpg" target="_blank" rel="noopener">Fireplace Lounge (Bell House, Camp John Hay) (Ralff Nestor Nacor, CC BY-SA 4.0)</a> ·
+                    <a href="https://commons.wikimedia.org/wiki/File:Camp_John_Hay_Garden_(12438180775).jpg" target="_blank" rel="noopener">Camp John Hay Garden (Andrew and Annemarie, CC BY-SA 2.0)</a> ·
+                    <a href="https://commons.wikimedia.org/wiki/File:Benguet_mountains_-_view_from_Mines_View_Park_(Baguio,_Benguet)(2018-02-25).jpg" target="_blank" rel="noopener">Cordillera Mountains (Mines View) (Patrick Roque, CC BY-SA 4.0)</a> ·
+                    <a href="https://commons.wikimedia.org/wiki/File:Baguio_skyline_with_Burnham_Park_(close-up)_(Baguio,_Benguet)(2018-02-25).jpg" target="_blank" rel="noopener">Burnham Park Skyline (Patrick Roque, CC BY-SA 4.0)</a> ·
+                    <a href="https://commons.wikimedia.org/wiki/File:Panagbenga_Street_Parade_003_2023-02-25.jpg" target="_blank" rel="noopener">Panagbenga Street Parade (LMP 2001, CC BY-SA 4.0)</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="vendor/bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
