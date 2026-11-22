@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery | Vicentenium Hotel</title>
+    <link rel="stylesheet" href="vendor/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="vendor/bootstrap-icons/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- navigation bar -->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top hotel-navbar">
+            <div class="container">
+                <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+                    <span class="logo-circle">V</span>
+                    <span class="brand-title fw-bold">Vicentenium <small class="gold-text fs-6 fw-normal">Hotel</small></span>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainMenu" aria-label="Toggle menu">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="mainMenu">
+                    <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-1">
+                        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                        <li class="nav-item"><a class="nav-link" href="rooms.html">Rooms &amp; Rates</a></li>
+                        <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+                        <li class="nav-item"><a class="nav-link" href="reviews.html">Reviews</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                        <li class="nav-item ms-lg-2">
+                            <a class="btn btn-gold btn-sm px-3" href="booking.html">
+                                <i class="bi bi-calendar-check me-1"></i>Book Now
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- page header -->
+        <section class="page-header" style="background-image: url('images/hero.jpg');">
+            <div class="container">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb justify-content-center small mb-2">
+                        <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                        <li class="breadcrumb-item active text-white-50">Gallery</li>
+                    </ol>
+                </nav>
+                <h1 class="display-5 fw-bold">Baguio Media Gallery</h1>
+                <p class="mb-0 text-white-50">Click any photograph to enlarge. Every photo was taken in Baguio City.</p>
+            </div>
+        </section>
+
+        <!-- photo filter and grid -->
+        <section class="py-5">
+            <div class="container">
+                <div class="text-center mb-4 d-flex flex-wrap justify-content-center gap-2">
+                    <button type="button" class="btn btn-outline-navy btn-sm filter-btn active" data-category="all">All (12)</button>
+                    <button type="button" class="btn btn-outline-navy btn-sm filter-btn" data-category="views">Rooms &amp; Views</button>
+                    <button type="button" class="btn btn-outline-navy btn-sm filter-btn" data-category="dining">Dining</button>
+                    <button type="button" class="btn btn-outline-navy btn-sm filter-btn" data-category="explore">Explore Baguio</button>
+                    <button type="button" class="btn btn-outline-navy btn-sm filter-btn" data-category="events">Festivals &amp; Heritage</button>
+                </div>
+
+                <div class="row g-3">
+                    <div class="col-sm-6 col-lg-4 gallery-item" data-category="views">
+                        <div class="gallery-box shadow-sm">
+                            <img src="images/hero.jpg" alt="Baguio City sunset skyline" loading="lazy">
+                            <div class="gallery-label">Baguio City sunset skyline</div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-lg-4 gallery-item" data-category="views">
+                        <div class="gallery-box shadow-sm">
+                            <img src="images/lobby.jpg" alt="Heritage Baguio fireplace lounge" loading="lazy">
+                            <div class="gallery-label">Heritage Baguio fireplace lounge</div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-lg-4 gallery-item" data-category="views">
+                        <div class="gallery-box shadow-sm">
+                            <img src="images/room-standard.jpg" alt="Pine Classic Room - Camp John Hay garden view" loading="lazy">
+                            <div class="gallery-label">Pine Classic Room - Camp John Hay garden view</div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-lg-4 gallery-item" data-category="views">
+                        <div class="gallery-box shadow-sm">
+                            <img src="images/room-deluxe.jpg" alt="Deluxe Mountain View - Cordillera mountains" loading="lazy">
+                            <div class="gallery-label">Deluxe Mountain View - Cordillera mountains</div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-lg-4 gallery-item" data-category="views">
+                        <div class="gallery-box shadow-sm">
+                            <img src="images/room-family.jpg" alt="Family Highland Room - Burnham Park skyline" loading="lazy">
+                            <div class="gallery-label">Family Highland Room - Burnham Park skyline</div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-lg-4 gallery-item" data-category="views">
+                        <div class="gallery-box shadow-sm">
+                            <img src="images/room-suite.jpg" alt="Session Executive Suite - Baguio night lights" loading="lazy">
+                            <div class="gallery-label">Session Executive Suite - Baguio night lights</div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-lg-4 gallery-item" data-category="dining">
+                        <div class="gallery-box shadow-sm">
+                            <img src="images/restaurant.jpg" alt="Warm Filipino binalot in Baguio" loading="lazy">
+                            <div class="gallery-label">Warm Filipino binalot in Baguio</div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-lg-4 gallery-item" data-category="dining">
+                        <div class="gallery-box shadow-sm">
+                            <img src="images/taho.jpg" alt="Classic Baguio strawberry taho" loading="lazy">
+                            <div class="gallery-label">Classic Baguio strawberry taho</div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-lg-4 gallery-item" data-category="explore">
+                        <div class="gallery-box shadow-sm">
+                            <img src="images/burnham.jpg" alt="Burnham Park lake &amp; swan boats" loading="lazy">
+                            <div class="gallery-label">Burnham Park lake &amp; swan boats</div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-lg-4 gallery-item" data-category="explore">
+                        <div class="gallery-box shadow-sm">
+                            <img src="images/session-road.jpg" alt="Session Road at sunrise" loading="lazy">
+                            <div class="gallery-label">Session Road at sunrise</div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-lg-4 gallery-item" data-category="events">
+                        <div class="gallery-box shadow-sm">
+                            <img src="images/events.jpg" alt="Panagbenga Flower Festival street parade" loading="lazy">
+                            <div class="gallery-label">Panagbenga Flower Festival street parade</div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-lg-4 gallery-item" data-category="events">
+                        <div class="gallery-box shadow-sm">
+                            <img src="images/heritage.jpg" alt="Vintage Pines Hotel Baguio heritage photo" loading="lazy">
+                            <div class="gallery-label">Vintage Pines Hotel Baguio heritage photo</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- photo popup modal -->
+        <div class="modal fade" id="galleryModal" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-lg modal-dialog-centered">
+                <div class="modal-content bg-dark text-white">
+                    <div class="modal-header border-0 pb-0">
+                        <p class="mb-0 small" id="lightboxText"></p>
+                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body text-center">
+                        <img id="lightboxPhoto" src="" alt="Enlarged Baguio photo" class="img-fluid rounded">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- footer -->
+    <footer class="hotel-footer py-4">
+        <div class="container small">
+            <div class="d-flex flex-wrap justify-content-between align-items-center gap-2">
+                <span>© <span id="currentYear"></span> Vicentenium Hotel · 88 Leonard Wood Rd, Baguio City · (074) 442-8888</span>
+                <span>
+                    <a href="mailto:stay@vicentenium.ph">stay@vicentenium.ph</a> ·
+                    <a href="booking.html#staff-login">Staff Login</a>
+                </span>
+            </div>
+            <hr class="footer-divider my-3">
+            <div class="photo-sources">
+                <strong>Photo Sources (Wikimedia Commons):</strong><br>
+                    <a href="https://commons.wikimedia.org/wiki/File:Baguio_skyline_sunset_Kisad_(Baguio_City;_12-03-2022).jpg" target="_blank" rel="noopener">Baguio Sunset Skyline (Patrickroque01, CC BY-SA 4.0)</a> ·
+                    <a href="https://commons.wikimedia.org/wiki/File:Bell_House_Interior,_Camp_John_Hay,_Baguio,_Jul_2025.jpg" target="_blank" rel="noopener">Fireplace Lounge (Bell House, Camp John Hay) (Ralff Nestor Nacor, CC BY-SA 4.0)</a> ·
+                    <a href="https://commons.wikimedia.org/wiki/File:Camp_John_Hay_Garden_(12438180775).jpg" target="_blank" rel="noopener">Camp John Hay Garden (Andrew and Annemarie, CC BY-SA 2.0)</a> ·
+                    <a href="https://commons.wikimedia.org/wiki/File:Benguet_mountains_-_view_from_Mines_View_Park_(Baguio,_Benguet)(2018-02-25).jpg" target="_blank" rel="noopener">Cordillera Mountains (Mines View) (Patrick Roque, CC BY-SA 4.0)</a> ·
+                    <a href="https://commons.wikimedia.org/wiki/File:Baguio_skyline_with_Burnham_Park_(close-up)_(Baguio,_Benguet)(2018-02-25).jpg" target="_blank" rel="noopener">Burnham Park Skyline (Patrick Roque, CC BY-SA 4.0)</a> ·
+                    <a href="https://commons.wikimedia.org/wiki/File:Baguio_City_overlooking_night_view_(Baguio_City;_02-24-2023).jpg" target="_blank" rel="noopener">Baguio City Night View (Patrickroque01, CC BY-SA 4.0)</a> ·
+                    <a href="https://commons.wikimedia.org/wiki/File:Binalot_na_Lechon_Kawali_in_Baguio_City.jpg" target="_blank" rel="noopener">Binalot na Lechon Kawali (Baguio) (Ralff Nestor Nacor, CC BY-SA 4.0)</a> ·
+                    <a href="https://commons.wikimedia.org/wiki/File:Strawberry_Taho_in_Baguio_City,_Jan_2024.jpg" target="_blank" rel="noopener">Strawberry Taho (Baguio) (Ralff Nestor Nacor, CC BY-SA 4.0)</a> ·
+                    <a href="https://commons.wikimedia.org/wiki/File:Swan_Lake.JPG" target="_blank" rel="noopener">Burnham Park Swan Lake (Ignacio Malapitan III, CC BY-SA 3.0)</a> ·
+                    <a href="https://commons.wikimedia.org/wiki/File:Session_Road_sunrise_(Baguio,_Benguet)(2018-11-26).jpg" target="_blank" rel="noopener">Session Road Sunrise (patrickroque01, CC BY-SA 4.0)</a> ·
+                    <a href="https://commons.wikimedia.org/wiki/File:Panagbenga_Street_Parade_003_2023-02-25.jpg" target="_blank" rel="noopener">Panagbenga Street Parade (LMP 2001, CC BY-SA 4.0)</a> ·
+                    <a href="https://commons.wikimedia.org/wiki/File:Pines_Hotel_te_Baguio_in_de_Filippijnen,_KITLV_1400128.tiff" target="_blank" rel="noopener">Vintage Pines Hotel Baguio (KITLV / Unknown, CC BY 4.0)</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="vendor/bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

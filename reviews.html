@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guest Reviews | Vicentenium Hotel</title>
+    <link rel="stylesheet" href="vendor/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="vendor/bootstrap-icons/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- navigation bar -->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top hotel-navbar">
+            <div class="container">
+                <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+                    <span class="logo-circle">V</span>
+                    <span class="brand-title fw-bold">Vicentenium <small class="gold-text fs-6 fw-normal">Hotel</small></span>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainMenu" aria-label="Toggle menu">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="mainMenu">
+                    <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-1">
+                        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                        <li class="nav-item"><a class="nav-link" href="rooms.html">Rooms &amp; Rates</a></li>
+                        <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+                        <li class="nav-item"><a class="nav-link" href="reviews.html">Reviews</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                        <li class="nav-item ms-lg-2">
+                            <a class="btn btn-gold btn-sm px-3" href="booking.html">
+                                <i class="bi bi-calendar-check me-1"></i>Book Now
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- page header -->
+        <section class="page-header" style="background-image: url('images/burnham.jpg');">
+            <div class="container">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb justify-content-center small mb-2">
+                        <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                        <li class="breadcrumb-item active text-white-50">Reviews</li>
+                    </ol>
+                </nav>
+                <h1 class="display-5 fw-bold">Guest Ratings &amp; Reviews</h1>
+                <p class="mb-0 text-white-50">Real feedback from families, couples, and travellers in Baguio.</p>
+            </div>
+        </section>
+
+        <!-- ratings summary, review list, and form -->
+        <section class="py-5">
+            <div class="container">
+                <div id="pageAlert"></div>
+
+                <!-- average rating bar -->
+                <div class="d-flex flex-wrap justify-content-between align-items-center cream-bg rounded-3 p-4 mb-4 gap-3">
+                    <div>
+                        <span class="display-5 fw-bold navy-text" id="averageScore">4.8</span>
+                        <span class="star-rating fs-4 ms-2">★★★★★</span>
+                        <span class="small text-muted ms-2">(<span id="reviewCount">4</span> reviews)</span>
+                    </div>
+                    <div class="d-flex align-items-center gap-2">
+                        <label for="ratingFilter" class="small fw-semibold">Filter:</label>
+                        <select id="ratingFilter" class="form-select form-select-sm" style="width: auto;">
+                            <option value="all">All ratings</option>
+                            <option value="5">5 stars</option>
+                            <option value="4">4 stars</option>
+                            <option value="3">3 stars</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- review cards loaded by script.js -->
+                <div class="row g-4 mb-5" id="reviewsContainer"></div>
+
+                <!-- write a review form -->
+                <div class="card info-card p-4">
+                    <h2 class="h4 mb-3">Write a Review</h2>
+                    <form id="reviewForm" class="row g-3" novalidate>
+                        <div class="col-md-4">
+                            <label for="reviewerName" class="form-label small fw-semibold">Your Name *</label>
+                            <input type="text" id="reviewerName" class="form-control" required placeholder="Camille Santos">
+                        </div>
+                        <div class="col-md-3">
+                            <label for="travelerType" class="form-label small fw-semibold">Traveler Type</label>
+                            <select id="travelerType" class="form-select">
+                                <option>Couple</option>
+                                <option>Family</option>
+                                <option>Solo</option>
+                                <option>Business</option>
+                                <option>Barkada</option>
+                            </select>
+                        </div>
+                        <div class="col-md-3">
+                            <label for="roomStayed" class="form-label small fw-semibold">Room Stayed In</label>
+                            <select id="roomStayed" class="form-select">
+                                <option>Pine Classic Room</option>
+                                <option>Deluxe Mountain View</option>
+                                <option>Family Highland Room</option>
+                                <option>Session Executive Suite</option>
+                            </select>
+                        </div>
+                        <div class="col-md-2">
+                            <label for="starRating" class="form-label small fw-semibold">Rating</label>
+                            <select id="starRating" class="form-select">
+                                <option value="5">5 ★</option>
+                                <option value="4">4 ★</option>
+                                <option value="3">3 ★</option>
+                                <option value="2">2 ★</option>
+                                <option value="1">1 ★</option>
+                            </select>
+                        </div>
+                        <div class="col-12">
+                            <label for="reviewMessage" class="form-label small fw-semibold">Your Review *</label>
+                            <textarea id="reviewMessage" class="form-control" rows="3" required minlength="10" placeholder="Share your experience at Vicentenium Hotel..."></textarea>
+                        </div>
+                        <div class="col-12">
+                            <button type="submit" class="btn btn-gold">Publish Review</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- footer -->
+    <footer class="hotel-footer py-4">
+        <div class="container small">
+            <div class="d-flex flex-wrap justify-content-between align-items-center gap-2">
+                <span>© <span id="currentYear"></span> Vicentenium Hotel · 88 Leonard Wood Rd, Baguio City · (074) 442-8888</span>
+                <span>
+                    <a href="mailto:stay@vicentenium.ph">stay@vicentenium.ph</a> ·
+                    <a href="booking.html#staff-login">Staff Login</a>
+                </span>
+            </div>
+            <hr class="footer-divider my-3">
+            <div class="photo-sources">
+                <strong>Photo Sources (Wikimedia Commons):</strong><br>
+                    <a href="https://commons.wikimedia.org/wiki/File:Swan_Lake.JPG" target="_blank" rel="noopener">Burnham Park Swan Lake (Ignacio Malapitan III, CC BY-SA 3.0)</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="vendor/bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book a Room | Vicentenium Hotel</title>
+    <link rel="stylesheet" href="vendor/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="vendor/bootstrap-icons/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- navigation bar -->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top hotel-navbar">
+            <div class="container">
+                <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+                    <span class="logo-circle">V</span>
+                    <span class="brand-title fw-bold">Vicentenium <small class="gold-text fs-6 fw-normal">Hotel</small></span>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainMenu" aria-label="Toggle menu">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="mainMenu">
+                    <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-1">
+                        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                        <li class="nav-item"><a class="nav-link" href="rooms.html">Rooms &amp; Rates</a></li>
+                        <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+                        <li class="nav-item"><a class="nav-link" href="reviews.html">Reviews</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                        <li class="nav-item ms-lg-2">
+                            <a class="btn btn-gold btn-sm px-3" href="booking.html">
+                                <i class="bi bi-calendar-check me-1"></i>Book Now
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- page header -->
+        <section class="page-header" style="background-image: url('images/session-road.jpg');">
+            <div class="container">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb justify-content-center small mb-2">
+                        <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                        <li class="breadcrumb-item active text-white-50">Book a Room</li>
+                    </ol>
+                </nav>
+                <h1 class="display-5 fw-bold">Reserve Your Stay</h1>
+                <p class="mb-0 text-white-50">Choose your dates, review live pricing, and confirm your Baguio room reservation.</p>
+            </div>
+        </section>
+
+        <!-- booking form and price summary -->
+        <section class="py-5 cream-bg">
+            <div class="container">
+                <div id="pageAlert"></div>
+                <div class="row g-4">
+                    <div class="col-lg-8">
+                        <form id="bookingForm" class="card info-card p-4" novalidate>
+                            <h2 class="h4 mb-3">New Room Reservation</h2>
+                            <div class="row g-3">
+                                <div class="col-md-4">
+                                    <label for="checkInDate" class="form-label small fw-semibold">Check-in *</label>
+                                    <input type="date" id="checkInDate" class="form-control" required>
+                                </div>
+                                <div class="col-md-4">
+                                    <label for="checkOutDate" class="form-label small fw-semibold">Check-out *</label>
+                                    <input type="date" id="checkOutDate" class="form-control" required>
+                                </div>
+                                <div class="col-md-2 col-6">
+                                    <label for="guestCount" class="form-label small fw-semibold">Guests</label>
+                                    <input type="number" id="guestCount" class="form-control" value="2" min="1" max="50" required>
+                                </div>
+                                <div class="col-md-2 col-6">
+                                    <label for="roomCount" class="form-label small fw-semibold">Rooms</label>
+                                    <input type="number" id="roomCount" class="form-control" value="1" min="1" max="15" required>
+                                </div>
+
+                                <div class="col-12">
+                                    <label for="roomSelect" class="form-label small fw-semibold">Room Type *</label>
+                                    <select id="roomSelect" class="form-select" required>
+                                        <option value="standard">Pine Classic Room - ₱3,200/night (up to 2 guests)</option>
+                                        <option value="deluxe">Deluxe Mountain View - ₱4,800/night (up to 2 guests)</option>
+                                        <option value="family">Family Highland Room - ₱6,500/night (up to 4 guests)</option>
+                                        <option value="suite">Session Executive Suite - ₱9,800/night (up to 3 guests)</option>
+                                    </select>
+                                </div>
+
+                                <div class="col-12">
+                                    <span class="form-label small fw-semibold d-block">Optional Add-ons</span>
+                                    <div class="row g-2 small">
+                                        <div class="col-sm-6">
+                                            <label class="form-check">
+                                                <input type="checkbox" class="form-check-input" name="addon" value="breakfast">
+                                                Breakfast Buffet (₱450/guest/night)
+                                            </label>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <label class="form-check">
+                                                <input type="checkbox" class="form-check-input" name="addon" value="shuttle">
+                                                Bus Terminal Shuttle (₱900)
+                                            </label>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <label class="form-check">
+                                                <input type="checkbox" class="form-check-input" name="addon" value="late">
+                                                Late Check-out 4 PM (₱1,000/room)
+                                            </label>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <label class="form-check">
+                                                <input type="checkbox" class="form-check-input" name="addon" value="tour">
+                                                Baguio City Tour (₱1,800/guest)
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-4">
+                                    <label for="guestName" class="form-label small fw-semibold">Full Name *</label>
+                                    <input type="text" id="guestName" class="form-control" required minlength="2" placeholder="Juan Dela Cruz">
+                                </div>
+                                <div class="col-md-4">
+                                    <label for="guestEmail" class="form-label small fw-semibold">Email *</label>
+                                    <input type="email" id="guestEmail" class="form-control" required placeholder="juan@email.com">
+                                </div>
+                                <div class="col-md-4">
+                                    <label for="guestPhone" class="form-label small fw-semibold">Mobile Number *</label>
+                                    <input type="tel" id="guestPhone" class="form-control" required placeholder="09171234567">
+                                </div>
+
+                                <div class="col-12">
+                                    <button type="submit" class="btn btn-gold btn-lg w-100">Confirm Reservation</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+
+                    <div class="col-lg-4">
+                        <aside class="card info-card">
+                            <div class="card-header navy-bg text-white fw-semibold">
+                                <i class="bi bi-receipt me-2"></i>Live Booking Summary
+                            </div>
+                            <div class="card-body" id="bookingSummary"></div>
+                        </aside>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- guest booking lookup -->
+        <section class="py-5">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <div class="card info-card p-4">
+                            <h2 class="h4 mb-2">Lookup My Booking</h2>
+                            <p class="small text-muted mb-3">Already have a reservation? Enter your booking reference number to check status, print a receipt, or cancel.</p>
+                            <form id="lookupForm" class="row g-2">
+                                <div class="col-sm-8">
+                                    <label for="lookupRef" class="visually-hidden">Booking reference number</label>
+                                    <input type="text" id="lookupRef" class="form-control" placeholder="Enter reference number (e.g. VH-2601)" required>
+                                </div>
+                                <div class="col-sm-4 d-grid">
+                                    <button type="submit" class="btn btn-navy">
+                                        <i class="bi bi-search me-1"></i>Find Booking
+                                    </button>
+                                </div>
+                            </form>
+                            <div id="lookupResult" class="mt-3"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- front desk dashboard -->
+        <section class="py-5 cream-bg d-none" id="frontDeskSection">
+            <div class="container">
+                <div class="d-flex flex-wrap justify-content-between align-items-end gap-3 mb-4">
+                    <div>
+                        <span class="gold-text text-uppercase small fw-semibold">Staff Portal</span>
+                        <h2 class="mb-0">Front Desk Dashboard</h2>
+                    </div>
+                    <div class="d-flex gap-2 flex-wrap align-items-center">
+                        <input type="search" id="searchBooking" class="form-control form-control-sm" style="width: 200px;" placeholder="Search ref or guest...">
+                        <select id="statusFilter" class="form-select form-select-sm" style="width: auto;">
+                            <option value="all">All statuses</option>
+                            <option value="confirmed">Confirmed</option>
+                            <option value="checked-in">Checked In</option>
+                            <option value="completed">Completed</option>
+                            <option value="cancelled">Cancelled</option>
+                        </select>
+                        <button type="button" id="staffLogoutBtn" class="btn btn-outline-danger btn-sm">
+                            <i class="bi bi-box-arrow-right me-1"></i>Log Out
+                        </button>
+                    </div>
+                </div>
+
+                <!-- quick stats -->
+                <div class="row g-3 mb-4">
+                    <div class="col-6 col-md-3">
+                        <div class="stat-box p-3">
+                            <div class="fs-3 fw-bold navy-text" id="availableRooms">42</div>
+                            <small class="text-muted">Rooms Available</small>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-3">
+                        <div class="stat-box p-3">
+                            <div class="fs-3 fw-bold navy-text" id="activeBookings">0</div>
+                            <small class="text-muted">Active Bookings</small>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-3">
+                        <div class="stat-box p-3">
+                            <div class="fs-3 fw-bold navy-text" id="checkedInCount">0</div>
+                            <small class="text-muted">Checked-In Guests</small>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-3">
+                        <div class="stat-box p-3">
+                            <div class="fs-3 fw-bold navy-text" id="totalBookingAmount">₱0</div>
+                            <small class="text-muted">Active Booking Value</small>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- reservation records table -->
+                <div class="table-responsive bg-white rounded-3 shadow-sm">
+                    <table class="table table-hover align-middle mb-0">
+                        <thead class="table-dark">
+                            <tr>
+                                <th>Ref</th>
+                                <th>Guest</th>
+                                <th>Room</th>
+                                <th>Dates</th>
+                                <th class="text-end">Total</th>
+                                <th>Status</th>
+                                <th class="text-end">Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody id="reservationTable"></tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- staff login modal -->
+        <div class="modal fade" id="staffLoginModal" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-sm">
+                <div class="modal-content">
+                    <div class="modal-header navy-bg text-white">
+                        <h2 class="modal-title h6 mb-0 text-white"><i class="bi bi-shield-lock me-2"></i>Staff Login</h2>
+                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <form id="staffLoginForm">
+                        <div class="modal-body">
+                            <div id="loginError" class="alert alert-danger py-2 small d-none"></div>
+                            <div class="mb-3">
+                                <label for="staffUsername" class="form-label small fw-semibold">Username</label>
+                                <input type="text" id="staffUsername" class="form-control" placeholder="Enter username" required>
+                            </div>
+                            <div class="mb-2">
+                                <label for="staffPassword" class="form-label small fw-semibold">Password</label>
+                                <div class="input-group">
+                                    <input type="password" id="staffPassword" class="form-control" placeholder="Enter password" required>
+                                    <button type="button" id="toggleStaffPassword" class="btn btn-outline-secondary btn-sm">Show</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="submit" class="btn btn-gold w-100">Log In</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- footer -->
+    <footer class="hotel-footer py-4">
+        <div class="container small">
+            <div class="d-flex flex-wrap justify-content-between align-items-center gap-2">
+                <span>© <span id="currentYear"></span> Vicentenium Hotel · 88 Leonard Wood Rd, Baguio City · (074) 442-8888</span>
+                <span>
+                    <a href="mailto:stay@vicentenium.ph">stay@vicentenium.ph</a> ·
+                    <a href="#staff-login" id="openStaffLogin">Staff Login</a>
+                </span>
+            </div>
+            <hr class="footer-divider my-3">
+            <div class="photo-sources">
+                <strong>Photo Sources (Wikimedia Commons):</strong><br>
+                    <a href="https://commons.wikimedia.org/wiki/File:Session_Road_sunrise_(Baguio,_Benguet)(2018-11-26).jpg" target="_blank" rel="noopener">Session Road Sunrise (patrickroque01, CC BY-SA 4.0)</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="vendor/bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

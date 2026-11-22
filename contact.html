@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Vicentenium Hotel</title>
+    <link rel="stylesheet" href="vendor/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="vendor/bootstrap-icons/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- navigation bar -->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top hotel-navbar">
+            <div class="container">
+                <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+                    <span class="logo-circle">V</span>
+                    <span class="brand-title fw-bold">Vicentenium <small class="gold-text fs-6 fw-normal">Hotel</small></span>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainMenu" aria-label="Toggle menu">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="mainMenu">
+                    <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-1">
+                        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                        <li class="nav-item"><a class="nav-link" href="rooms.html">Rooms &amp; Rates</a></li>
+                        <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+                        <li class="nav-item"><a class="nav-link" href="reviews.html">Reviews</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                        <li class="nav-item ms-lg-2">
+                            <a class="btn btn-gold btn-sm px-3" href="booking.html">
+                                <i class="bi bi-calendar-check me-1"></i>Book Now
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- page header -->
+        <section class="page-header" style="background-image: url('images/session-road.jpg');">
+            <div class="container">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb justify-content-center small mb-2">
+                        <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                        <li class="breadcrumb-item active text-white-50">Contact</li>
+                    </ol>
+                </nav>
+                <h1 class="display-5 fw-bold">Contact Us</h1>
+                <p class="mb-0 text-white-50">88 Leonard Wood Road, Baguio City · Front Desk Open 24/7</p>
+            </div>
+        </section>
+
+        <!-- contact details, form, and hours -->
+        <section class="py-5">
+            <div class="container">
+                <div id="pageAlert"></div>
+
+                <!-- contact info cards -->
+                <div class="row g-4 mb-5 text-center">
+                    <div class="col-md-4">
+                        <div class="card info-card h-100 p-4">
+                            <div class="feature-icon mx-auto mb-2"><i class="bi bi-geo-alt"></i></div>
+                            <h2 class="h6">Location</h2>
+                            <p class="small text-muted mb-0">88 Leonard Wood Road, Baguio City, 2600 Benguet</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card info-card h-100 p-4">
+                            <div class="feature-icon mx-auto mb-2"><i class="bi bi-telephone"></i></div>
+                            <h2 class="h6">Phone</h2>
+                            <p class="small text-muted mb-0">(074) 442-8888 · +63 917 888 2600</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card info-card h-100 p-4">
+                            <div class="feature-icon mx-auto mb-2"><i class="bi bi-envelope"></i></div>
+                            <h2 class="h6">Email</h2>
+                            <p class="small text-muted mb-0">stay@vicentenium.ph · events@vicentenium.ph</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row g-4">
+                    <!-- inquiry form -->
+                    <div class="col-lg-7">
+                        <div class="card info-card p-4">
+                            <h2 class="h4 mb-3">Send an Inquiry</h2>
+                            <form id="contactForm" class="row g-3" novalidate>
+                                <div class="col-md-6">
+                                    <label for="senderName" class="form-label small fw-semibold">Full Name *</label>
+                                    <input type="text" id="senderName" class="form-control" required placeholder="Juan Dela Cruz">
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="senderEmail" class="form-label small fw-semibold">Email *</label>
+                                    <input type="email" id="senderEmail" class="form-control" required placeholder="juan@email.com">
+                                </div>
+                                <div class="col-12">
+                                    <label for="inquiryTopic" class="form-label small fw-semibold">Topic *</label>
+                                    <select id="inquiryTopic" class="form-select" required>
+                                        <option value="">Choose a topic...</option>
+                                        <option>Room reservation</option>
+                                        <option>Group / event booking</option>
+                                        <option>Shuttle &amp; city tour</option>
+                                        <option>Other question</option>
+                                    </select>
+                                </div>
+                                <div class="col-12">
+                                    <label for="inquiryMessage" class="form-label small fw-semibold">Message *</label>
+                                    <textarea id="inquiryMessage" class="form-control" rows="4" required minlength="10" placeholder="How can our front desk help you?"></textarea>
+                                </div>
+                                <div class="col-12">
+                                    <button type="submit" class="btn btn-gold">Send Message</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+
+                    <!-- operational hours -->
+                    <div class="col-lg-5">
+                        <div class="card info-card p-4 h-100">
+                            <h2 class="h4 mb-2">Operational Hours</h2>
+                            <p class="small text-muted mb-3" id="localTimeText"></p>
+                            <table class="table table-sm align-middle mb-0">
+                                <tbody>
+                                    <tr class="schedule-row" data-open="0" data-close="24">
+                                        <td>Front Desk</td>
+                                        <td class="small text-muted">24 / 7</td>
+                                        <td class="text-end open-status"></td>
+                                    </tr>
+                                    <tr class="schedule-row" data-open="6" data-close="22">
+                                        <td>Highland Café</td>
+                                        <td class="small text-muted">6:00 AM – 10:00 PM</td>
+                                        <td class="text-end open-status"></td>
+                                    </tr>
+                                    <tr class="schedule-row" data-open="6" data-close="10">
+                                        <td>Breakfast Buffet</td>
+                                        <td class="small text-muted">6:00 AM – 10:00 AM</td>
+                                        <td class="text-end open-status"></td>
+                                    </tr>
+                                    <tr class="schedule-row" data-open="9" data-close="21">
+                                        <td>Hilot Spa</td>
+                                        <td class="small text-muted">9:00 AM – 9:00 PM</td>
+                                        <td class="text-end open-status"></td>
+                                    </tr>
+                                    <tr class="schedule-row" data-open="7" data-close="19">
+                                        <td>City Shuttle</td>
+                                        <td class="small text-muted">7:00 AM – 7:00 PM</td>
+                                        <td class="text-end open-status"></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <hr>
+                            <p class="small text-muted mb-0">
+                                <strong>Directions:</strong> 6 minutes by taxi from Victory Liner / Genesis Bus Terminal; 5-minute walk from Session Road and Burnham Park.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- footer -->
+    <footer class="hotel-footer py-4">
+        <div class="container small">
+            <div class="d-flex flex-wrap justify-content-between align-items-center gap-2">
+                <span>© <span id="currentYear"></span> Vicentenium Hotel · 88 Leonard Wood Rd, Baguio City · (074) 442-8888</span>
+                <span>
+                    <a href="mailto:stay@vicentenium.ph">stay@vicentenium.ph</a> ·
+                    <a href="booking.html#staff-login">Staff Login</a>
+                </span>
+            </div>
+            <hr class="footer-divider my-3">
+            <div class="photo-sources">
+                <strong>Photo Sources (Wikimedia Commons):</strong><br>
+                    <a href="https://commons.wikimedia.org/wiki/File:Session_Road_sunrise_(Baguio,_Benguet)(2018-11-26).jpg" target="_blank" rel="noopener">Session Road Sunrise (patrickroque01, CC BY-SA 4.0)</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="vendor/bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
